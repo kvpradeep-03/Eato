@@ -5,7 +5,7 @@ import { menu_list } from '../../assets/assets'
 //destructuring the props to get category and setCategory from home component
 const ExploreMenu = ({ category, setCategory }) => {
     return (
-        <div className='explore-menu'>
+        <div className='explore-menu' id="explore-menu">
             <h1>Explore Menu</h1>
             <p>Craving something tasty? Dive into our menu and discover your next favorite meal!</p>
             {/* by clicking stores the current name and compares the weather the stored name and selected name is true 
