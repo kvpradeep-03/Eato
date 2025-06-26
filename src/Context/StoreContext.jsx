@@ -15,7 +15,7 @@ const StoreContextProvider = (props) => {
     // if cartItems is empty, then add the item with quantity 1 
     const addToCart = (itemId) => {
         if (!cartItems[itemId]) {
-            setCartItems((prev) => ({ ...prev, [itemId]: 1 }))
+            setCartItems((prev) => ({ ...prev, [itemId]: 1 }))  //assigns by the key-->item_id of the dish value-->quantity
         } else {
             setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 })) //if item already exists in the cart, then increase the quantity by 1
         }
@@ -30,12 +30,24 @@ const StoreContextProvider = (props) => {
 
     // },[cartItems])
 
+    const getTotalCartAmount = ()=>{
+        let totalAmount = 0
+        for(const item in cartItems){ // for key in value of cartItems 
+            if(cartItems[item] > 0){ //qty of item is > 0
+                let itemInfo = food_list.find((product)=>product._id === item)
+                totalAmount += itemInfo.price * cartItems[item]
+            } 
+        }
+        return totalAmount
+    }
+
     const contextValue = {
         food_list,
         cartItems,
         setCartItems,
         addToCart,
-        removeFromCart
+        removeFromCart,
+        getTotalCartAmount
 
     }
 

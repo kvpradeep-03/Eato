@@ -11,6 +11,7 @@ const FoodItem = ({ id, name, price, description, image }) => {
             <div className="food-item-img-container">
                 <img src={image} alt="food-item-image" className="food-item-image" />
                 {   // checking that the id of the food item is present in the cartItems object or not
+                    // onclick the id will be passed which is passed as a props in FoodDisplay component
                     !cartItems[id] ? <img onClick={()=>addToCart(id)} src={assets.add_icon_white} alt="addNew" className="add" /> :
                     <div className="food-item-counter">
                         <img onClick={()=>removeFromCart(id)} src={assets.remove_icon_red} alt='remove'/>
