@@ -2,9 +2,12 @@ import React, { useContext } from 'react'
 import { assets } from '../../assets/assets'
 import './FoodItem.css'
 import { StoreContext } from '../../Context/StoreContext'
+import { useNavigate } from 'react-router-dom'
+import view from '../view/View'
 
 const FoodItem = ({ id, name, price, description, image }) => {
     const { cartItems, removeFromCart, addToCart } = useContext(StoreContext)
+    const navigate = useNavigate()
 
     return (
         <div className='food-item'>
@@ -26,7 +29,13 @@ const FoodItem = ({ id, name, price, description, image }) => {
                     <img src={assets.rating_starts} alt="food-item-rating" />
                 </div>
                 <p className="food-item-desc">{description}</p>
-                <p className="food-item-price">&#8377;{price}</p>
+                <div style={{display: 'flex', justifyContent: 'space-between', alignItems:'center'}}>
+                    <span
+                        onClick={() => navigate('/view', { state: { id, name, price, description, image } })}
+                        className="view-link"
+                    >view</span>
+                    <p className="food-item-price">&#8377;{price}</p>
+                </div>
             </div>
 
 

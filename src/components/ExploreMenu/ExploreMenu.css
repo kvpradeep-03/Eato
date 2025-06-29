@@ -5,8 +5,13 @@
 }
 
 .explore-menu h1 {
-    color: #565656;
+    color: #212121;
     font-weight: 500;
+}
+
+.explore-menu h2 {
+    font-size: max(2vw, 24px);
+    font-weight: 600;
 }
 
 .explore-menu-list {
@@ -32,9 +37,17 @@
     transition: 0.2s;
 }
 
+.explore-menu-list-item img:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    /* Zoom in slightly */
+    box-shadow: 0px 10px 20px #00000025;
+    /* Optional: elevate with a shadow */
+}
+
 .explore-menu-list-item p {
     margin-top: 10px;
-    color: #747474;
+    color: #212121;
     font-size: max(1.4vw, 16px);
     cursor: pointer;
 }
@@ -66,4 +79,4 @@
         padding: 2vw 4vw;
         font-size: 14px;
     }
-} 
+}

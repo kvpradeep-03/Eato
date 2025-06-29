@@ -14,3 +14,12 @@
     gap: 30px;
     row-gap: 50px;
 }
+
+.view-link{
+    background-color: rgb(38, 126, 62);
+    color: white;
+    padding: 4px;
+    border-radius: 6px;
+    height: max(2vw,30px);
+    
+}

@@ -28,6 +28,7 @@ const ExploreMenu = ({ category, setCategory }) => {
 
             </div>
             <hr />
+            <h2>Top dishes near you</h2>
         </div>
     )
 }
