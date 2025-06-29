@@ -3,6 +3,8 @@ import './Navbar.css'
 import { assets } from '../../assets/assets'
 import { Link } from 'react-router-dom'
 import { StoreContext } from '../../Context/StoreContext'
+import LocalMallIcon from '@mui/icons-material/LocalMall';
+import SearchIcon from '@mui/icons-material/Search';
 
 const Navbar = ({setShowLogin}) => {
 
@@ -20,9 +22,9 @@ const Navbar = ({setShowLogin}) => {
                 <a href='#footer' onClick={() => setMenu("contact-us")} className={menu === "contact-us"?"active":""}>contact us</a>
             </ul>
             <div className='navbar-right'>
-                <img src={assets.search_icon} alt="search"/>
+                <SearchIcon sx={{display:{xs: 'none', sm: 'block'}, fontSize: 35 }} />
                 <div className='navbar-search-icon'>
-                    <Link to={'/cart'}><img src={assets.basket_icon} alt=""/></Link>
+                    <Link to={'/cart'}><LocalMallIcon sx={{ fontSize: 35 }} /></Link>
                     <div className={getTotalCartAmount() > 0? "dot" : " "}></div>
                 </div>
                 <button onClick={()=>setShowLogin(true)}>Sign in</button>

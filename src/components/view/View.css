@@ -35,7 +35,6 @@
 }
 
 .dish-container {
-    /**TOFIX: the problem is on this css element  /
     /* display: grid;
     grid-template-columns: 0.5fr 2fr;
     align-items: center;

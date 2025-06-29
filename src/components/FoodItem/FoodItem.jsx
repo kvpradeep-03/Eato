@@ -3,7 +3,6 @@ import { assets } from '../../assets/assets'
 import './FoodItem.css'
 import { StoreContext } from '../../Context/StoreContext'
 import { useNavigate } from 'react-router-dom'
-import view from '../view/View'
 
 const FoodItem = ({ id, name, price, description, image }) => {
     const { cartItems, removeFromCart, addToCart } = useContext(StoreContext)
@@ -31,6 +30,7 @@ const FoodItem = ({ id, name, price, description, image }) => {
                 <p className="food-item-desc">{description}</p>
                 <div style={{display: 'flex', justifyContent: 'space-between', alignItems:'center'}}>
                     <span
+                    // pin react useNavigation() is used to route as well as pass objs as states and this state can be used in /view.jsx by useLocation()
                         onClick={() => navigate('/view', { state: { id, name, price, description, image } })}
                         className="view-link"
                     >view</span>

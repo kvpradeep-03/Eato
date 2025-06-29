@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom';
 import './View.css'
 import CallIcon from '@mui/icons-material/Call';
@@ -13,7 +13,12 @@ import Divider from '@mui/material/Divider';
 import FoodDisplay from '../../FoodDisplay/FoodDisplay';
 
 const view = () => {
+    // to auto scroll to top while clicking the view btn
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    });
     const [category, setCategory] = useState("All")
+    // using useLocation we can use the passed state from useNavigate() in /foodItem.jsx which passes teh objs as state.
     const location = useLocation();
     const { id, name, price, description, image } = location.state;
     const { cartItems, removeFromCart, addToCart } = useContext(StoreContext)
