@@ -1,12 +1,46 @@
-# React + Vite
+# Eato 🍔
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Eato** is a sleek and modern food delivery frontend application built with **React** and **Material UI**. It showcases a list of restaurant dishes that users can browse, filter by category, add to cart, and proceed through a fully designed checkout flow.
 
-Currently, two official plugins are available:
+## 🌟 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🍽️ **Category-based Filtering**: Easily sort dishes by selecting a category (e.g., starters, drinks, desserts).
+- 🛒 **Interactive Cart System**: Add items to cart and update item quantity with smooth UI feedback.
+- 💳 **Payment Checkout Page**: A complete mock payment page to simulate the checkout experience.
+- 🎨 **Modern UI**: Designed with Material UI for a clean, responsive, and user-friendly interface.
 
-## Expanding the ESLint configuration
+## 🔗 Live Demo
+<img width="1898" height="939" alt="Screenshot from 2025-07-12 23-40-49" src="https://github.com/user-attachments/assets/8a6245d8-3756-45f1-b848-fcdd67e2d827" />
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## 👉 [Try Eato Live](https://eatoapp.netlify.app/)
+
+## 🛠️ Built With
+
+- [React](https://reactjs.org/)
+- [Material UI](https://mui.com/)
+- [React Context API] for state management
+
+
+## 🚀 Getting Started
+
+To run the project locally:
+
+### Clone the repo
+```
+git clone https://github.com/kvpradeep-03/Eato.git
+```
+### Move into the project directory
+```
+cd eato
+```
+
+### Install dependencies
+```
+npm install
+```
+### Start the development server
+```
+npm start
+```
+
